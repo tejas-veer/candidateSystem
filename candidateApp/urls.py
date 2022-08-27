@@ -5,6 +5,8 @@ from django.urls import path,include
 from .views import CandidateModelViewSet,UserModelViewSet
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token
+from django.conf import settings
+from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register('candi' , CandidateModelViewSet , basename='candi')
@@ -15,5 +17,5 @@ urlpatterns = [
     path('api/', include(router.urls) , name='candi' ),
     path('api/auth/', obtain_auth_token  , name='auth_token' ),
     
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

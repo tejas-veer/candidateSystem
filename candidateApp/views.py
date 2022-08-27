@@ -24,6 +24,8 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import BasicAuthentication,TokenAuthentication
 
+def index(request):
+    return HttpResponse('<h2> Welecome to Candidate System API </h2> Access API : <a href="https://candidate-system.herokuapp.com/api/candi/">https://candidate-system.herokuapp.com/api/candi/<a/>')
 
 class CandidateModelViewSet(ModelViewSet):
     # authentication_classes = [TokenAuthentication]

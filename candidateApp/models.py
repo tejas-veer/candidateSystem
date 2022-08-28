@@ -1,8 +1,8 @@
+from time import timezone
 from django.db import models
 
 # Create your models here.
 from django.db import models
-from django.core.validators import RegexValidator,MinLengthValidator
 
 
 STATUS_CHOICES = (
@@ -18,3 +18,4 @@ class candidateModel(models.Model):
     education = models.CharField(max_length=50)
     experience = models.CharField(max_length=500)
     status = models.CharField(max_length=8 , choices=STATUS_CHOICES , default='Applied')
+    applied_on = models.DateField(auto_now_add=True , editable=False)

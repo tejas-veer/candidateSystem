@@ -81,11 +81,13 @@ WSGI_APPLICATION = 'candidateSystem.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'deesphomq2boj0',
-        'HOST' : 'ec2-34-231-221-151.compute-1.amazonaws.com',
-        'USER': 'unetsiikkphhdj',
-        'PASSWORD' : 'f3fb3bce859e2e896db9d364e7f22bf84524ce1322288a12e6aa4b0c5a43170d',
+        'NAME': 'd62lvk1qmfq02n',
+        'HOST' : 'ec2-44-209-186-51.compute-1.amazonaws.com',
+        'USER': 'vcpmwaxtsglsyp',
+        'PASSWORD' : '48bafa7b1647b9243ebfad0893f1d69eadd488f2b89fcbea9e18e24e1bacccf8',
         'PORT' : 5432
 
 
